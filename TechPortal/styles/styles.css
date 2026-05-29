@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #bfc0c4;
+    padding-bottom: 2.5rem;
+}
+
+header {
+    background-color: #22272e;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 2vmin 16px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-title {
+    transition: 0.8s;
+}
+
+.header-title:hover {
+    transform: scale(1.05) translateY(-2px)
+}
+
+.nav-topic {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+main {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-destaque {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.card-principal {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.img-card-principal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.img-card-principal:hover {
+    transform: scale(1.1);
+}
+
+.card-principal .texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    color: white;
+}
+
+.card-principal .texto h2 {
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+.card-secundario {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.img-card-secundario {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.img-card-secundario:hover {
+    transform: scale(1.1);
+}
+
+.card-secundario .texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    color: white;
+}
+
+.card-terciario {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.img-card-terciario {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.img-card-terciario:hover {
+    transform: scale(1.1);
+}
+
+.card-terciario .texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    color: white;
+}
+
+.lista-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+
+.card-quaternario {
+    flex: 1 1 250px;
+    background-color: #fdfdfd;
+    /* color: aliceblue; */
+    border-radius: 1rem;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border: 1px solid #fdfdfd;
+    border-radius: 1rem;
+}
+
+.rodape {
+    background-color: #22272e;
+    color: aliceblue;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    /* position: fixed; */
+    bottom: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px 32px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        text-align: right;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    main {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        display: block;
+    }
+
+    .grid-destaque {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card-principal {
+        grid-column: 1 /2;
+        grid-row: 1 / 3;
+        height: 480px;
+    }
+
+    .card-secundario {
+        grid-column: 2 /2;
+        grid-row: 1 / 3;
+        height: 220px;
+    }
+
+    .card-terciario {
+        grid-column: 2/2;
+        grid-row: 2 / 3;
+        height: 220px;
+    }
+
+    .rodape {
+        position: fixed;
+    }
+}
