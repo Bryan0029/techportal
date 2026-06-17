@@ -1,3 +1,21 @@
+:root {
+    --cor-fundo-pagina: #bfc0c4;
+    --cor-fundo-escura: #22272e;
+    --cor-texto-claro: aliceblue;
+    --cor-fundo-card: #fdfdfd;
+    --cor-texto-overlay: white;
+    --cor-overlay-gradiente: rgba(0, 0, 0, 1);
+    --espaco-xs: 12px;
+    --espaco-sm: 16px;
+    --espaco-md: 20px;
+    --espaco-lg: 24px;
+    --espaco-xl: 32px;
+    --raio-pequeno: 1rem;
+    --raio-grande: 2rem;
+    --transicao-rapida: 0.8s;
+    --transicao-lenta: 1s;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,19 +27,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #bfc0c4;
+    background-color: var(--cor-fundo-pagina);
     padding-bottom: 2.5rem;
 }
 
 header {
-    background-color: #22272e;
-    color: aliceblue;
+    background-color: var(--cor-fundo-escura);
+    color: var(--cor-texto-claro);
     display: flex;
     align-items: center;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 2vmin 16px;
+    gap: var(--espaco-xs);
+    padding: 2vmin var(--espaco-sm);
     text-align: center;
 }
 
@@ -29,11 +46,11 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: var(--espaco-md);
 }
 
 .header-title {
-    transition: 0.8s;
+    transition: var(--transicao-rapida);
 }
 
 .header-title:hover {
@@ -41,7 +58,7 @@ nav {
 }
 
 .nav-topic {
-    color: aliceblue;
+    color: var(--cor-texto-claro);
     text-decoration: none;
     font-family: 'Rajdhani', sans-serif;
     font-size: 1rem;
@@ -58,8 +75,8 @@ main {
 .grid-destaque {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px;
+    gap: var(--espaco-sm);
+    padding: var(--espaco-sm);
 }
 
 .card-principal {
@@ -67,7 +84,7 @@ main {
     overflow: hidden;
     min-height: 300px;
     cursor: pointer;
-    border-radius: 2rem;
+    border-radius: var(--raio-grande);
 }
 
 .img-card-principal {
@@ -78,7 +95,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    transition: 1s;
+    transition: var(--transicao-lenta);
 }
 
 .img-card-principal:hover {
@@ -90,9 +107,9 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-    color: white;
+    padding: var(--espaco-lg);
+    background: linear-gradient(to top, var(--cor-overlay-gradiente), transparent);
+    color: var(--cor-texto-overlay);
 }
 
 .card-principal .texto h2 {
@@ -104,7 +121,7 @@ main {
     overflow: hidden;
     height: 160px;
     cursor: pointer;
-    border-radius: 2rem;
+    border-radius: var(--raio-grande);
 }
 
 .img-card-secundario {
@@ -115,7 +132,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    transition: 1s;
+    transition: var(--transicao-lenta);
 }
 
 .img-card-secundario:hover {
@@ -127,9 +144,9 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-    color: white;
+    padding: var(--espaco-lg);
+    background: linear-gradient(to top, var(--cor-overlay-gradiente), transparent);
+    color: var(--cor-texto-overlay);
 }
 
 .card-terciario {
@@ -137,7 +154,7 @@ main {
     overflow: hidden;
     height: 160px;
     cursor: pointer;
-    border-radius: 2rem;
+    border-radius: var(--raio-grande);
 }
 
 .img-card-terciario {
@@ -148,7 +165,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    transition: 1s;
+    transition: var(--transicao-lenta);
 }
 
 .img-card-terciario:hover {
@@ -160,41 +177,38 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-    color: white;
+    padding: var(--espaco-lg);
+    background: linear-gradient(to top, var(--cor-overlay-gradiente), transparent);
+    color: var(--cor-texto-overlay);
 }
 
 .lista-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    padding: 16px;
+    gap: var(--espaco-sm);
+    padding: var(--espaco-sm);
 }
 
 .card-quaternario {
     flex: 1 1 250px;
-    background-color: #fdfdfd;
-    /* color: aliceblue; */
-    border-radius: 1rem;
-    padding: 12px;
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-pequeno);
+    padding: var(--espaco-xs);
     display: flex;
     flex-direction: column;
     gap: 6px;
-    border: 1px solid #fdfdfd;
-    border-radius: 1rem;
+    border: 1px solid var(--cor-fundo-card);
 }
 
 .rodape {
-    background-color: #22272e;
-    color: aliceblue;
+    background-color: var(--cor-fundo-escura);
+    color: var(--cor-texto-claro);
     display: flex;
     flex-shrink: 0;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 2.5rem;
-    /* position: fixed; */
     bottom: 0;
 }
 
@@ -202,7 +216,7 @@ main {
     header {
         flex-direction: row;
         justify-content: space-between;
-        padding: 12px 32px;
+        padding: var(--espaco-xs) var(--espaco-xl);
         position: sticky;
         top: 0;
         z-index: 100;
@@ -212,13 +226,10 @@ main {
     nav {
         display: flex;
         flex-direction: row;
-        gap: 24px;
+        gap: var(--espaco-lg);
     }
 
     main {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
         display: block;
     }
 
